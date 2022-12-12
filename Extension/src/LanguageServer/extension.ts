@@ -27,6 +27,11 @@ import { Readable } from 'stream';
 import * as nls from 'vscode-nls';
 import { CppBuildTaskProvider } from './cppBuildTaskProvider';
 
+/* --------------------------------------------------------------------------------------------
+ * Import Common CUDA Functions used for Code Completion
+ * ------------------------------------------------------------------------------------------ */
+import * as cudaCommonFuncs from '../LanguageServer/cuda-common.json';
+
 nls.config({ messageFormat: nls.MessageFormat.bundle, bundleFormat: nls.BundleFormat.standalone })();
 const localize: nls.LocalizeFunc = nls.loadMessageBundle();
 export const CppSourceStr: string = "C/C++";
@@ -41,6 +46,12 @@ const commandDisposables: vscode.Disposable[] = [];
 let languageConfigurations: vscode.Disposable[] = [];
 let intervalTimer: NodeJS.Timer;
 let codeActionProvider: vscode.Disposable;
+
+/* --------------------------------------------------------------------------------------------
+ * Function Declaration for Code Completion Function
+ * ------------------------------------------------------------------------------------------ */
+let codeCompletionItemProvider: vscode.Disposable;
+
 export const intelliSenseDisabledError: string = "Do not activate the extension when IntelliSense is disabled.";
 
 type VcpkgDatabase = { [key: string]: string[] }; // Stored as <header file entry> -> [<port name>]
@@ -160,7 +171,7 @@ function sendActivationTelemetry(): void {
  */
 export async function activate(): Promise<void> {
 
-    console.log("activating extension");
+    console.log("activating extension - cudatools");
     sendActivationTelemetry();
     const checkForConflictingExtensions: PersistentState<boolean> = new PersistentState<boolean>("CPP." + util.packageJson.version + ".checkForConflictingExtensions", true);
     if (checkForConflictingExtensions.Value) {
@@ -172,7 +183,7 @@ export async function activate(): Promise<void> {
         }
     }
 
-    console.log("starting language server");
+    console.log("starting language server - cudatools");
     clients = new ClientCollection();
     ui = getUI();
 
@@ -250,6 +261,28 @@ export async function activate(): Promise<void> {
             const ports: string[] = await lookupIncludeInVcpkg(document, range.start.line);
             const actions: vscode.CodeAction[] = ports.map<vscode.CodeAction>(getVcpkgClipboardInstallAction);
             return actions;
+        }
+    });
+
+    /* --------------------------------------------------------------------------------------------
+    * Function Declaration for Code Completion Function
+    * ------------------------------------------------------------------------------------------ */
+    codeCompletionItemProvider = vscode.languages.registerCompletionItemProvider('cuda-cpp', {
+        provideCompletionItems(document: vscode.TextDocument, position: vscode.Position, token: vscode.CancellationToken, context: vscode.CodeActionContext) {
+			const completionList = [];
+
+			cudaCommonFuncs.forEach(element => {
+				const snippetCompletion = new vscode.CompletionItem(element.id);
+				snippetCompletion.insertText = new vscode.SnippetString(element.value);
+				try {
+					snippetCompletion.documentation = new vscode.MarkdownString(cudaFuncs[element.id].value);
+				} catch (err) {
+					console.log(err);
+				}
+				completionList.push(snippetCompletion);
+			});
+
+			return completionList;
         }
     });
 
@@ -1009,7 +1042,7 @@ function handleMacCrashFileRead(err: NodeJS.ErrnoException | undefined | null, d
 
 export function deactivate(): Thenable<void> {
     clients.timeTelemetryCollector.clear();
-    console.log("deactivating extension");
+    console.log("deactivating extension - cudatools");
     telemetry.logLanguageServerEvent("LanguageServerShutdown");
     clearInterval(intervalTimer);
     commandDisposables.forEach(d => d.dispose());
@@ -1019,6 +1052,14 @@ export function deactivate(): Thenable<void> {
     if (codeActionProvider) {
         codeActionProvider.dispose();
     }
+
+    /* --------------------------------------------------------------------------------------------
+    * Dispose Code Completion Function
+    * ------------------------------------------------------------------------------------------ */
+    if (codeCompletionItemProvider) {
+        codeCompletionItemProvider.dispose();
+    }
+
     return clients.dispose();
 }
 

@@ -1,0 +1,642 @@
+{
+    "cudaChooseDevice":{
+        "id": "cudaChooseDevice",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaChooseDevice ( int* device, const cudaDeviceProp* prop )"
+    },
+    "cudaDeviceFlushGPUDirectRDMAWrites":{
+        "id": "cudaDeviceFlushGPUDirectRDMAWrites",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaDeviceFlushGPUDirectRDMAWrites ( cudaFlushGPUDirectRDMAWritesTarget target, cudaFlushGPUDirectRDMAWritesScope scope )"
+    },
+    "cudaDeviceGetAttribute":{
+        "id": "cudaDeviceGetAttribute",
+        "value": "\\_\\_host\\_\\_ \\_\\_device\\_\\_ cudaError\\_t cudaDeviceGetAttribute ( int* value, cudaDeviceAttr attr, int  device )"
+    },
+    "cudaDeviceGetByPCIBusId":{
+        "id": "cudaDeviceGetByPCIBusId",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaDeviceGetByPCIBusId ( int* device, const char* pciBusId )"
+    },
+    "cudaDeviceGetCacheConfig":{
+        "id": "cudaDeviceGetCacheConfig",
+        "value": "\\_\\_host\\_\\_ \\_\\_device\\_\\_ cudaError\\_t cudaDeviceGetCacheConfig ( cudaFuncCache ** pCacheConfig )"
+    },
+    "cudaDeviceGetDefaultMemPool":{
+        "id": "cudaDeviceGetDefaultMemPool",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaDeviceGetDefaultMemPool ( cudaMemPool\\_t* memPool, int  device )"
+    },
+    "cudaDeviceGetLimit":{
+        "id": "cudaDeviceGetLimit",
+        "value": "\\_\\_host\\_\\_ \\_\\_device\\_\\_ cudaError\\_t cudaDeviceGetLimit ( size\\_t* pValue, cudaLimit limit )"
+    },
+    "cudaDeviceGetMemPool":{
+        "id": "cudaDeviceGetMemPool",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaDeviceGetMemPool ( cudaMemPool\\_t* memPool, int  device )"
+    },
+    "cudaDeviceGetNvSciSyncAttributes":{
+        "id": "cudaDeviceGetNvSciSyncAttributes",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaDeviceGetNvSciSyncAttributes ( void* nvSciSyncAttrList, int  device, int  flags )"
+    },
+    "cudaDeviceGetP2PAttribute":{
+        "id": "cudaDeviceGetP2PAttribute",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaDeviceGetP2PAttribute ( int* value, cudaDeviceP2PAttr attr, int  srcDevice, int  dstDevice )"
+    },
+    "cudaDeviceGetPCIBusId":{
+        "id": "cudaDeviceGetPCIBusId",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaDeviceGetPCIBusId ( char* pciBusId, int  len, int  device )"
+    },
+    "cudaDeviceGetSharedMemConfig":{
+        "id": "cudaDeviceGetSharedMemConfig",
+        "value": "\\_\\_host\\_\\_ \\_\\_device\\_\\_ cudaError\\_t cudaDeviceGetSharedMemConfig ( cudaSharedMemConfig ** pConfig )"
+    },
+    "cudaDeviceGetStreamPriorityRange":{
+        "id": "cudaDeviceGetStreamPriorityRange",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaDeviceGetStreamPriorityRange ( int* leastPriority, int* greatestPriority )"
+    },
+    "cudaDeviceGetTexture1DLinearMaxWidth":{
+        "id": "cudaDeviceGetTexture1DLinearMaxWidth",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaDeviceGetTexture1DLinearMaxWidth ( size\\_t* maxWidthInElements, const cudaChannelFormatDesc* fmtDesc, int  device )"
+    },
+    "cudaDeviceReset":{
+        "id": "cudaDeviceReset",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaDeviceReset ( void )"
+    },
+    "cudaDeviceSetCacheConfig":{
+        "id": "cudaDeviceSetCacheConfig",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaDeviceSetCacheConfig ( cudaFuncCache cacheConfig )"
+    },
+    "cudaDeviceSetLimit":{
+        "id": "cudaDeviceSetLimit",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaDeviceSetLimit ( cudaLimit limit, size\\_t value )"
+    },
+    "cudaDeviceSetMemPool":{
+        "id": "cudaDeviceSetMemPool",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaDeviceSetMemPool ( int  device, cudaMemPool\\_t memPool )"
+    },
+    "cudaDeviceSetSharedMemConfig":{
+        "id": "cudaDeviceSetSharedMemConfig",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaDeviceSetSharedMemConfig ( cudaSharedMemConfig config )"
+    },
+    "cudaDeviceSynchronize":{
+        "id": "cudaDeviceSynchronize",
+        "value": "\\_\\_host\\_\\_ \\_\\_device\\_\\_ cudaError\\_t cudaDeviceSynchronize ( void )"
+    },
+    "cudaGetDevice":{
+        "id": "cudaGetDevice",
+        "value": "\\_\\_host\\_\\_ \\_\\_device\\_\\_ cudaError\\_t cudaGetDevice ( int* device )"
+    },
+    "cudaGetDeviceCount":{
+        "id": "cudaGetDeviceCount",
+        "value": "\\_\\_host\\_\\_ \\_\\_device\\_\\_ cudaError\\_t cudaGetDeviceCount ( int* count )"
+    },
+    "cudaGetDeviceFlags":{
+        "id": "cudaGetDeviceFlags",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaGetDeviceFlags ( unsigned int* flags )"
+    },
+    "cudaGetDeviceProperties":{
+        "id": "cudaGetDeviceProperties",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaGetDeviceProperties ( cudaDeviceProp* prop, int  device )"
+    },
+    "cudaIpcCloseMemHandle":{
+        "id": "cudaIpcCloseMemHandle",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaIpcCloseMemHandle ( void* devPtr )"
+    },
+    "cudaIpcGetEventHandle":{
+        "id": "cudaGetErrorName",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaIpcGetEventHandle ( cudaIpcEventHandle\\_t* handle, cudaEvent\\_t event )"
+    },
+    "cudaIpcGetMemHandle":{
+        "id": "cudaIpcGetMemHandle",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaIpcGetMemHandle ( cudaIpcMemHandle\\_t* handle, void* devPtr )"
+    },
+    "cudaIpcOpenEventHandle":{
+        "id": "cudaGetErrorName",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaIpcOpenEventHandle ( cudaEvent\\_t* event, cudaIpcEventHandle\\_t handle )"
+    },
+    "cudaIpcOpenMemHandle":{
+        "id": "cudaIpcOpenMemHandle",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaIpcOpenMemHandle ( void** devPtr, cudaIpcMemHandle\\_t handle, unsigned int  flags )"
+    },
+    "cudaSetDevice":{
+        "id": "cudaSetDevice",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaSetDevice ( int  device )"
+    },
+    "cudaSetDeviceFlags":{
+        "id": "cudaSetDeviceFlags",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaSetDeviceFlags ( unsigned int  flags )"
+    },
+    "cudaSetValidDevices":{
+        "id": "cudaSetValidDevices",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaSetValidDevices ( int* device\\_arr, int  len )"
+    },
+    "cudaGetErrorName":{
+        "id": "cudaGetErrorName",
+        "value": "\\_\\_host\\_\\_ \\_\\_device\\_\\_ const char* cudaGetErrorName ( cudaError\\_t error )"
+    },
+    "cudaGetErrorString":{
+        "id": "cudaGetErrorString",
+        "value": "\\_\\_host\\_\\_ \\_\\_device\\_\\_ const char* cudaGetErrorString ( cudaError\\_t error )"
+    },
+    "cudaGetLastError":{
+        "id": "cudaGetLastError",
+        "value": "\\_\\_host\\_\\_ \\_\\_device\\_\\_ cudaError\\_t cudaGetLastError ( void )"
+    },
+    "cudaPeekAtLastError":{
+        "id": "cudaPeekAtLastError",
+        "value": "\\_\\_host\\_\\_ \\_\\_device\\_\\_ cudaError\\_t cudaPeekAtLastError ( void )"
+    },
+    "cudaCtxResetPersistingL2Cache":{
+        "id": "cudaCtxResetPersistingL2Cache",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaCtxResetPersistingL2Cache ( void )"
+    },
+    "cudaStreamAddCallback":{
+        "id": "cudaStreamAddCallback",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaStreamAddCallback ( cudaStream\\_t stream, cudaStreamCallback\\_t callback, void* userData, unsigned int  flags )"
+    },
+    "cudaStreamAttachMemAsync":{
+        "id": "cudaStreamAttachMemAsync",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaStreamAttachMemAsync ( cudaStream\\_t stream, void* devPtr, size\\_t length = 0, unsigned int  flags = cudaMemAttachSingle )"
+    },
+    "cudaStreamBeginCapture":{
+        "id": "cudaStreamBeginCapture",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaStreamBeginCapture ( cudaStream\\_t stream, cudaStreamCaptureMode mode )"
+    },
+    "cudaStreamCopyAttributes":{
+        "id": "cudaStreamCopyAttributes",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaStreamCopyAttributes ( cudaStream\\_t dst, cudaStream\\_t src )"
+    },
+    "cudaStreamCreate":{
+        "id": "cudaStreamCreate",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaStreamCreate ( cudaStream\\_t* pStream )"
+    },
+    "cudaStreamCreateWithFlags":{
+        "id": "cudaStreamCreateWithFlags",
+        "value": "\\_\\_host\\_\\_ \\_\\_device\\_\\_ cudaError\\_t cudaStreamCreateWithFlags ( cudaStream\\_t* pStream, unsigned int  flags )"
+    },
+    "cudaStreamCreateWithPriority":{
+        "id": "cudaStreamCreateWithPriority",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaStreamCreateWithPriority ( cudaStream\\_t* pStream, unsigned int  flags, int  priority )"
+    },
+    "cudaStreamDestroy":{
+        "id": "cudaStreamDestroy",
+        "value": "\\_\\_host\\_\\_ \\_\\_device\\_\\_ cudaError\\_t cudaStreamDestroy ( cudaStream\\_t stream )"
+    },
+    "cudaStreamEndCapture":{
+        "id": "cudaStreamEndCapture",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaStreamEndCapture ( cudaStream\\_t stream, cudaGraph\\_t* pGraph )"
+    },
+    "cudaStreamGetAttribute":{
+        "id": "cudaStreamGetAttribute",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaStreamGetAttribute ( cudaStream\\_t hStream, cudaStreamAttrID attr, cudaStreamAttrValue* value\\_out )"
+    },
+    "cudaStreamGetCaptureInfo":{
+        "id": "cudaStreamGetCaptureInfo",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaStreamGetCaptureInfo ( cudaStream\\_t stream, cudaStreamCaptureStatus ** pCaptureStatus, unsigned long long* pId )"
+    },
+    "cudaStreamGetCaptureInfo\\_v2":{
+        "id": "cudaStreamGetCaptureInfo\\_v2",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaStreamGetCaptureInfo\\_v2 ( cudaStream\\_t stream, cudaStreamCaptureStatus ** captureStatus\\_out, unsigned long long* id\\_out = 0, cudaGraph\\_t* graph\\_out = 0, const cudaGraphNode\\_t** dependencies\\_out = 0, size\\_t* numDependencies\\_out = 0 )"
+    },
+    "cudaStreamGetFlags":{
+        "id": "cudaStreamGetFlags",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaStreamGetFlags ( cudaStream\\_t hStream, unsigned int* flags )"
+    },
+    "cudaStreamGetPriority":{
+        "id": "cudaStreamGetPriority",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaStreamGetPriority ( cudaStream\\_t hStream, int* priority )"
+    },
+    "cudaStreamIsCapturing":{
+        "id": "cudaStreamIsCapturing",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaStreamIsCapturing ( cudaStream\\_t stream, cudaStreamCaptureStatus ** pCaptureStatus )"
+    },
+    "cudaStreamQuery":{
+        "id": "cudaStreamQuery",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaStreamQuery ( cudaStream\\_t stream )"
+    },
+    "cudaStreamSetAttribute":{
+        "id": "cudaStreamSetAttribute",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaStreamSetAttribute ( cudaStream\\_t hStream, cudaStreamAttrID attr, const cudaStreamAttrValue* value )"
+    },
+    "cudaStreamSynchronize":{
+        "id": "cudaStreamSynchronize",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaStreamSynchronize ( cudaStream\\_t stream )"
+    },
+    "cudaStreamUpdateCaptureDependencies":{
+        "id": "cudaStreamUpdateCaptureDependencies",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaStreamUpdateCaptureDependencies ( cudaStream\\_t stream, cudaGraphNode\\_t* dependencies, size\\_t numDependencies, unsigned int  flags = 0 )"
+    },
+    "cudaStreamWaitEvent":{
+        "id": "cudaStreamWaitEvent",
+        "value": "\\_\\_host\\_\\_ \\_\\_device\\_\\_ cudaError\\_t cudaStreamWaitEvent ( cudaStream\\_t stream, cudaEvent\\_t event, unsigned int  flags = 0 )"
+    },
+    "cudaThreadExchangeStreamCaptureMode":{
+        "id": "cudaThreadExchangeStreamCaptureMode",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaThreadExchangeStreamCaptureMode ( cudaStreamCaptureMode ** mode )"
+    },
+    "cudaEventCreate":{
+        "id": "cudaEventCreate",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaEventCreate ( cudaEvent\\_t* event )"
+    },
+    "cudaEventCreateWithFlags":{
+        "id": "cudaEventCreateWithFlags",
+        "value": "\\_\\_host\\_\\_ \\_\\_device\\_\\_ cudaError\\_t cudaEventCreateWithFlags ( cudaEvent\\_t* event, unsigned int  flags )"
+    },
+    "cudaEventDestroy":{
+        "id": "cudaEventDestroy",
+        "value": "\\_\\_host\\_\\_ \\_\\_device\\_\\_ cudaError\\_t cudaEventDestroy ( cudaEvent\\_t event )"
+    },
+    "cudaEventElapsedTime":{
+        "id": "cudaEventElapsedTime",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaEventElapsedTime ( float* ms, cudaEvent\\_t start, cudaEvent\\_t end )"
+    },
+    "cudaEventQuery":{
+        "id": "cudaEventQuery",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaEventQuery ( cudaEvent\\_t event )"
+    },
+    "cudaEventRecord":{
+        "id": "cudaStreamQuery",
+        "value": "\\_\\_host\\_\\_ \\_\\_device\\_\\_ cudaError\\_t cudaEventRecord ( cudaEvent\\_t event, cudaStream\\_t stream = 0 )"
+    },
+    "cudaEventRecordWithFlags":{
+        "id": "cudaEventRecordWithFlags",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaEventRecordWithFlags ( cudaEvent\\_t event, cudaStream\\_t stream = 0, unsigned int  flags = 0 )"
+    },
+    "cudaEventSynchronize":{
+        "id": "cudaEventSynchronize",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaEventSynchronize ( cudaEvent\\_t event )"
+    },
+    "cudaFuncGetAttributes":{
+        "id": "cudaFuncGetAttributes",
+        "value": "\\_\\_host\\_\\_\\_\\_device\\_\\_ cudaError\\_t cudaFuncGetAttributes ( cudaFuncAttributes* attr, const void* func )"
+    },
+    "cudaFuncSetAttribute":{
+        "id": "cudaFuncSetAttribute",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaFuncSetAttribute ( const void* func, cudaFuncAttribute attr, int  value )"
+    },
+    "cudaFuncSetCacheConfig":{
+        "id": "cudaFuncSetCacheConfig",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaFuncSetCacheConfig ( const void* func, cudaFuncCache cacheConfig )"
+    },
+    "cudaFuncSetSharedMemConfig":{
+        "id": "cudaFuncSetSharedMemConfig",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaFuncSetSharedMemConfig ( const void* func, cudaSharedMemConfig config )"
+    },
+    "cudaGetParameterBuffer":{
+        "id": "cudaGetParameterBuffer",
+        "value": "\\_\\_device\\_\\_  void* cudaGetParameterBuffer ( size\\_t alignment, size\\_t size )"
+    },
+    "cudaGetParameterBufferV2":{
+        "id": "cudaGetParameterBufferV2",
+        "value": "\\_\\_device\\_\\_  void* cudaGetParameterBufferV2 ( void* func, dim3 gridDimension, dim3 blockDimension, unsigned int  sharedMemSize )"
+    },
+    "cudaLaunchCooperativeKernel":{
+        "id": "cudaLaunchCooperativeKernel",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaLaunchCooperativeKernel ( const void* func, dim3 gridDim, dim3 blockDim, void** args, size\\_t sharedMem, cudaStream\\_t stream )"
+    },
+    "cudaLaunchCooperativeKernelMultiDevice":{
+        "id": "cudaLaunchCooperativeKernelMultiDevice",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaLaunchCooperativeKernelMultiDevice ( cudaLaunchParams* launchParamsList, unsigned int  numDevices, unsigned int  flags = 0 )"
+    },
+    "cudaLaunchHostFunc":{
+        "id": "cudaLaunchHostFunc",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaLaunchHostFunc ( cudaStream\\_t stream, cudaHostFn\\_t fn, void* userData )"
+    },
+    "cudaLaunchKernel":{
+        "id": "cudaLaunchKernel",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaLaunchKernel ( const void* func, dim3 gridDim, dim3 blockDim, void** args, size\\_t sharedMem, cudaStream\\_t stream )"
+    },
+    "cudaSetDoubleForDevice":{
+        "id": "cudaSetDoubleForDevice",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaSetDoubleForDevice ( double* d )"
+    },
+    "cudaSetDoubleForHost":{
+        "id": "cudaSetDoubleForHost",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaSetDoubleForHost ( double* d )"
+    },
+    "cudaOccupancyAvailableDynamicSMemPerBlock":{
+        "id": "cudaOccupancyAvailableDynamicSMemPerBlock",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaOccupancyAvailableDynamicSMemPerBlock ( size\\_t* dynamicSmemSize, const void* func, int  numBlocks, int  blockSize )"
+    },
+    "cudaOccupancyMaxActiveBlocksPerMultiprocessor":{
+        "id": "cudaOccupancyMaxActiveBlocksPerMultiprocessor",
+        "value": "\\_\\_host\\_\\_ \\_\\_device\\_\\_ cudaError\\_t cudaOccupancyMaxActiveBlocksPerMultiprocessor ( int* numBlocks, const void* func, int  blockSize, size\\_t dynamicSMemSize )"
+    },
+    "cudaOccupancyMaxActiveBlocksPerMultiprocessorWithFlags":{
+        "id": "cudaOccupancyMaxActiveBlocksPerMultiprocessorWithFlags",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaOccupancyMaxActiveBlocksPerMultiprocessorWithFlags ( int* numBlocks, const void* func, int  blockSize, size\\_t dynamicSMemSize, unsigned int  flags )"
+    },
+    "cudaArrayGetInfo":{
+        "id": "cudaArrayGetInfo",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaArrayGetInfo ( cudaChannelFormatDesc* desc, cudaExtent* extent, unsigned int* flags, cudaArray\\_t array )"
+    },
+    "cudaArrayGetPlane":{
+        "id": "cudaArrayGetPlane",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaArrayGetPlane ( cudaArray\\_t* pPlaneArray, cudaArray\\_t hArray, unsigned int  planeIdx )"
+    },
+    "cudaArrayGetSparseProperties":{
+        "id": "cudaArrayGetSparseProperties",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaArrayGetSparseProperties ( cudaArraySparseProperties* sparseProperties, cudaArray\\_t array )"
+    },
+    "cudaFree":{
+        "id": "cudaFree",
+        "value": "\\_\\_host\\_\\_ \\_\\_device\\_\\_ cudaError\\_t cudaFree ( void* devPtr )"
+    },
+    "cudaFreeHost":{
+        "id": "cudaFreeHost",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaFreeHost ( void* ptr )"
+    },
+    "cudaFreeMipmappedArray":{
+        "id": "cudaFreeMipmappedArray",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaFreeMipmappedArray ( cudaMipmappedArray\\_t mipmappedArray )"
+    },
+    "cudaGetMipmappedArrayLevel":{
+        "id": "cudaGetMipmappedArrayLevel",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaGetMipmappedArrayLevel ( cudaArray\\_t* levelArray, cudaMipmappedArray\\_const\\_t mipmappedArray, unsigned int  level )"
+    },
+    "cudaGetSymbolAddress":{
+        "id": "cudaGetSymbolAddress",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaGetSymbolAddress ( void** devPtr, const void* symbol )"
+    },
+    "cudaGetSymbolSize":{
+        "id": "cudaGetSymbolSize",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaGetSymbolSize ( size\\_t* size, const void* symbol )"
+    },
+    "cudaHostAlloc":{
+        "id": "cudaHostAlloc",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaHostAlloc ( void** pHost, size\\_t size, unsigned int  flags )"
+    },
+    "cudaHostGetDevicePointer":{
+        "id": "cudaHostGetDevicePointer",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaHostGetDevicePointer ( void** pDevice, void* pHost, unsigned int  flags )"
+    },
+    "cudaHostGetFlags":{
+        "id": "cudaHostGetFlags",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaHostGetFlags ( unsigned int* pFlags, void* pHost )"
+    },
+    "cudaHostRegister":{
+        "id": "cudaHostRegister",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaHostRegister ( void* ptr, size\\_t size, unsigned int  flags )"
+    },
+    "cudaHostUnregister":{
+        "id": "cudaHostUnregister",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaHostUnregister ( void* ptr )"
+    },
+    "cudaMalloc":{
+        "id": "cudaMalloc",
+        "value": "\\_\\_host\\_\\_ \\_\\_device\\_\\_ cudaError\\_t cudaMalloc ( void** devPtr, size\\_t size )"
+    },
+    "cudaMalloc3D":{
+        "id": "cudaMalloc3D",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaMalloc3D ( cudaPitchedPtr* pitchedDevPtr, cudaExtent extent )"
+    },
+    "cudaMalloc3DArray":{
+        "id": "cudaMalloc3DArray",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaMalloc3DArray ( cudaArray\\_t* array, const cudaChannelFormatDesc* desc, cudaExtent extent, unsigned int  flags = 0 )"
+    },
+    "cudaMallocArray":{
+        "id": "cudaMallocArray",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaMallocArray ( cudaArray\\_t* array, const cudaChannelFormatDesc* desc, size\\_t width, size\\_t height = 0, unsigned int  flags = 0 )"
+    },
+    "cudaMallocHost":{
+        "id": "cudaMallocHost",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaMallocHost ( void** ptr, size\\_t size )"
+    },
+    "cudaMallocManaged":{
+        "id": "cudaMallocManaged",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaMallocManaged ( void** devPtr, size\\_t size, unsigned int  flags = cudaMemAttachGlobal )"
+    },
+    "cudaMallocMipmappedArray":{
+        "id": "cudaMallocMipmappedArray",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaMallocMipmappedArray ( cudaMipmappedArray\\_t* mipmappedArray, const cudaChannelFormatDesc* desc, cudaExtent extent, unsigned int  numLevels, unsigned int  flags = 0 )"
+    },
+    "cudaMallocPitch":{
+        "id": "cudaMallocPitch",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaMallocPitch ( void** devPtr, size\\_t* pitch, size\\_t width, size\\_t height )"
+    },
+    "cudaMemAdvise":{
+        "id": "cudaMemAdvise",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaMemAdvise ( const void* devPtr, size\\_t count, cudaMemoryAdvise advice, int  device )"
+    },
+    "cudaMemGetInfo":{
+        "id": "cudaMemGetInfo",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaMemGetInfo ( size\\_t* free, size\\_t* total )"
+    },
+    "cudaMemPrefetchAsync":{
+        "id": "cudaMemPrefetchAsync",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaMemPrefetchAsync ( const void* devPtr, size\\_t count, int  dstDevice, cudaStream\\_t stream = 0 )"
+    },
+    "cudaMemRangeGetAttribute":{
+        "id": "cudaMemRangeGetAttribute",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaMemRangeGetAttribute ( void* data, size\\_t dataSize, cudaMemRangeAttribute attribute, const void* devPtr, size\\_t count )"
+    },
+    "cudaMemRangeGetAttributes":{
+        "id": "cudaMemRangeGetAttributes",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaMemRangeGetAttributes ( void** data, size\\_t* dataSizes, cudaMemRangeAttribute ** attributes, size\\_t numAttributes, const void* devPtr, size\\_t count )"
+    },
+    "cudaMemcpy":{
+        "id": "cudaMemcpy",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaMemcpy ( void* dst, const void* src, size\\_t count, cudaMemcpyKind kind )"
+    },
+    "cudaMemcpy2D":{
+        "id": "cudaMemcpy2D",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaMemcpy2D ( void* dst, size\\_t dpitch, const void* src, size\\_t spitch, size\\_t width, size\\_t height, cudaMemcpyKind kind )"
+    },
+    "cudaMemcpy2DArrayToArray":{
+        "id": "cudaMemcpy2DArrayToArray",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaMemcpy2DArrayToArray ( cudaArray\\_t dst, size\\_t wOffsetDst, size\\_t hOffsetDst, cudaArray\\_const\\_t src, size\\_t wOffsetSrc, size\\_t hOffsetSrc, size\\_t width, size\\_t height, cudaMemcpyKind kind = cudaMemcpyDeviceToDevice )"
+    },
+    "cudaMemcpy2DAsync":{
+        "id": "cudaMemcpy2DAsync",
+        "value": "\\_\\_host\\_\\_ \\_\\_device\\_\\_ cudaError\\_t cudaMemcpy2DAsync ( void* dst, size\\_t dpitch, const void* src, size\\_t spitch, size\\_t width, size\\_t height, cudaMemcpyKind kind, cudaStream\\_t stream = 0 )"
+    },
+    "cudaMemcpy2DFromArray":{
+        "id": "cudaMemcpy2DFromArray",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaMemcpy2DFromArray ( void* dst, size\\_t dpitch, cudaArray\\_const\\_t src, size\\_t wOffset, size\\_t hOffset, size\\_t width, size\\_t height, cudaMemcpyKind kind )"
+    },
+    "cudaMemcpy2DFromArrayAsync":{
+        "id": "cudaMemcpy2DFromArrayAsync",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaMemcpy2DFromArrayAsync ( void* dst, size\\_t dpitch, cudaArray\\_const\\_t src, size\\_t wOffset, size\\_t hOffset, size\\_t width, size\\_t height, cudaMemcpyKind kind, cudaStream\\_t stream = 0 )"
+    },
+    "cudaMemcpy2DToArray":{
+        "id": "cudaMemcpy2DToArray",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaMemcpy2DToArray ( cudaArray\\_t dst, size\\_t wOffset, size\\_t hOffset, const void* src, size\\_t spitch, size\\_t width, size\\_t height, cudaMemcpyKind kind )"
+    },
+    "cudaMemcpy2DToArrayAsync":{
+        "id": "cudaMemcpy2DToArrayAsync",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaMemcpy2DToArrayAsync ( cudaArray\\_t dst, size\\_t wOffset, size\\_t hOffset, const void* src, size\\_t spitch, size\\_t width, size\\_t height, cudaMemcpyKind kind, cudaStream\\_t stream = 0 )"
+    },
+    "cudaMemcpy3D":{
+        "id": "cudaMemcpy3D",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaMemcpy3D ( const cudaMemcpy3DParms* p )"
+    },
+    "cudaMemcpy3DAsync":{
+        "id": "cudaMemcpy3DAsync",
+        "value": "\\_\\_host\\_\\_ \\_\\_device\\_\\_ cudaError\\_t cudaMemcpy3DAsync ( const cudaMemcpy3DParms* p, cudaStream\\_t stream = 0 )"
+    },
+    "cudaMemcpy3DPeer":{
+        "id": "cudaMemcpy3DPeer",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaMemcpy3DPeer ( const cudaMemcpy3DPeerParms* p )"
+    },
+    "cudaMemcpy3DPeerAsync":{
+        "id": "cudaMemcpy3DPeerAsync",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaMemcpy3DPeerAsync ( const cudaMemcpy3DPeerParms* p, cudaStream\\_t stream = 0 )"
+    },
+    "cudaMemcpyAsync":{
+        "id": "cudaMemcpyAsync",
+        "value": "\\_\\_host\\_\\_ \\_\\_device\\_\\_ cudaError\\_t cudaMemcpyAsync ( void* dst, const void* src, size\\_t count, cudaMemcpyKind kind, cudaStream\\_t stream = 0 )"
+    },
+    "cudaMemcpyFromSymbol":{
+        "id": "cudaMemcpyFromSymbol",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaMemcpyFromSymbol ( void* dst, const void* symbol, size\\_t count, size\\_t offset = 0, cudaMemcpyKind kind = cudaMemcpyDeviceToHost )"
+    },
+    "cudaMemcpyFromSymbolAsync":{
+        "id": "cudaMemcpyFromSymbolAsync",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaMemcpyFromSymbolAsync ( void* dst, const void* symbol, size\\_t count, size\\_t offset, cudaMemcpyKind kind, cudaStream\\_t stream = 0 )"
+    },
+    "cudaMemcpyPeer":{
+        "id": "cudaMemcpyPeer",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaMemcpyPeer ( void* dst, int  dstDevice, const void* src, int  srcDevice, size\\_t count )"
+    },
+    "cudaMemcpyPeerAsync":{
+        "id": "cudaMemcpyPeerAsync",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaMemcpyPeerAsync ( void* dst, int  dstDevice, const void* src, int  srcDevice, size\\_t count, cudaStream\\_t stream = 0 )"
+    },
+    "cudaMemcpyToSymbol":{
+        "id": "cudaMemcpyToSymbol",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaMemcpyToSymbol ( const void* symbol, const void* src, size\\_t count, size\\_t offset = 0, cudaMemcpyKind kind = cudaMemcpyHostToDevice )"
+    },
+    "cudaMemcpyToSymbolAsync":{
+        "id": "cudaMemcpyToSymbolAsync",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaMemcpyToSymbolAsync ( const void* symbol, const void* src, size\\_t count, size\\_t offset, cudaMemcpyKind kind, cudaStream\\_t stream = 0 )"
+    },
+    "cudaMemset":{
+        "id": "cudaMemset",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaMemset ( void* devPtr, int  value, size\\_t count )"
+    },
+    "cudaMemset2D":{
+        "id": "cudaMemset2D",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaMemset2D ( void* devPtr, size\\_t pitch, int  value, size\\_t width, size\\_t height )"
+    },
+    "cudaMemset2DAsync":{
+        "id": "cudaMemset2DAsync",
+        "value": "\\_\\_host\\_\\_ \\_\\_device\\_\\_ cudaError\\_t cudaMemset2DAsync ( void* devPtr, size\\_t pitch, int  value, size\\_t width, size\\_t height, cudaStream\\_t stream = 0 )"
+    },
+    "cudaMemset3D":{
+        "id": "cudaMemset3D",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaMemset3D ( cudaPitchedPtr pitchedDevPtr, int  value, cudaExtent extent )"
+    },
+    "cudaMemset3DAsync":{
+        "id": "cudaMemset3DAsync",
+        "value": "\\_\\_host\\_\\_ \\_\\_device\\_\\_ cudaError\\_t cudaMemset3DAsync ( cudaPitchedPtr pitchedDevPtr, int  value, cudaExtent extent, cudaStream\\_t stream = 0 )"
+    },
+    "cudaMemsetAsync":{
+        "id": "cudaMemsetAsync",
+        "value": "\\_\\_host\\_\\_ \\_\\_device\\_\\_ cudaError\\_t cudaMemsetAsync ( void* devPtr, int  value, size\\_t count, cudaStream\\_t stream = 0 )"
+    },
+    "cudaMipmappedArrayGetSparseProperties":{
+        "id": "cudaMipmappedArrayGetSparseProperties",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaMipmappedArrayGetSparseProperties ( cudaArraySparseProperties* sparseProperties, cudaMipmappedArray\\_t mipmap )"
+    },
+    "make\\_cudaExtent":{
+        "id": "make\\_cudaExtent",
+        "value": "\\_\\_host\\_\\_ cudaExtent make\\_cudaExtent ( size\\_t w, size\\_t h, size\\_t d )"
+    },
+    "make\\_cudaPitchedPtr":{
+        "id": "make\\_cudaPitchedPtr",
+        "value": "\\_\\_host\\_\\_ cudaPitchedPtr make\\_cudaPitchedPtr ( void* d, size\\_t p, size\\_t xsz, size\\_t ysz )"
+    },
+    "make\\_cudaPos":{
+        "id": "make\\_cudaPos",
+        "value": "\\_\\_host\\_\\_ cudaPos make\\_cudaPos ( size\\_t x, size\\_t y, size\\_t z )"
+    },
+    "cudaFreeAsync":{
+        "id": "cudaFreeAsync",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaFreeAsync ( void* devPtr, cudaStream\\_t hStream )"
+    },
+    "cudaMallocAsync":{
+        "id": "cudaMallocAsync",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaMallocAsync ( void** devPtr, size\\_t size, cudaStream\\_t hStream )"
+    },
+    "cudaMallocFromPoolAsync":{
+        "id": "make\\_cudaPos",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaMallocFromPoolAsync ( void** ptr, size\\_t size, cudaMemPool\\_t memPool, cudaStream\\_t stream )"
+    },
+    "cudaMemPoolCreate":{
+        "id": "cudaMemPoolCreate",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaMemPoolCreate ( cudaMemPool\\_t* memPool, const cudaMemPoolProps* poolProps )"
+    },
+    "cudaMemPoolDestroy":{
+        "id": "cudaMemPoolDestroy",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaMemPoolDestroy ( cudaMemPool\\_t memPool )"
+    },
+    "cudaMemPoolExportPointer":{
+        "id": "cudaMemPoolExportPointer",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaMemPoolExportPointer ( cudaMemPoolPtrExportData* exportData, void* ptr )"
+    },
+    "cudaMemPoolExportToShareableHandle":{
+        "id": "cudaMemPoolExportToShareableHandle",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaMemPoolExportToShareableHandle ( void* shareableHandle, cudaMemPool\\_t memPool, cudaMemAllocationHandleType handleType, unsigned int  flags )"
+    },
+    "cudaMemPoolGetAccess":{
+        "id": "cudaMemPoolGetAccess",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaMemPoolGetAccess ( cudaMemAccessFlags ** flags, cudaMemPool\\_t memPool, cudaMemLocation* location )"
+    },
+    "cudaMemPoolGetAttribute":{
+        "id": "cudaMemPoolGetAttribute",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaMemPoolGetAttribute ( cudaMemPool\\_t memPool, cudaMemPoolAttr attr, void* value )"
+    },
+    "cudaMemPoolImportFromShareableHandle":{
+        "id": "cudaMemPoolImportFromShareableHandle",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaMemPoolImportFromShareableHandle ( cudaMemPool\\_t* memPool, void* shareableHandle, cudaMemAllocationHandleType handleType, unsigned int  flags )"
+    },
+    "cudaMemPoolImportPointer":{
+        "id": "cudaMemPoolImportPointer",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaMemPoolImportPointer ( void** ptr, cudaMemPool\\_t memPool, cudaMemPoolPtrExportData* exportData )"
+    },
+    "cudaMemPoolSetAccess":{
+        "id": "cudaMemPoolSetAccess",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaMemPoolSetAccess ( cudaMemPool\\_t memPool, const cudaMemAccessDesc* descList, size\\_t count )"
+    },
+    "cudaMemPoolSetAttribute":{
+        "id": "cudaMemPoolSetAttribute",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaMemPoolSetAttribute ( cudaMemPool\\_t memPool, cudaMemPoolAttr attr, void* value )"
+    },
+    "cudaMemPoolTrimTo":{
+        "id": "cudaMemPoolTrimTo",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaMemPoolTrimTo ( cudaMemPool\\_t memPool, size\\_t minBytesToKeep )"
+    },
+    "cudaPointerGetAttributes":{
+        "id": "cudaPointerGetAttributes",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaPointerGetAttributes ( cudaPointerAttributes* attributes, const void* ptr )"
+    },
+    "cudaDeviceCanAccessPeer":{
+        "id": "cudaDeviceCanAccessPeer",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaDeviceCanAccessPeer ( int* canAccessPeer, int  device, int  peerDevice )"
+    },
+    "cudaDeviceDisablePeerAccess":{
+        "id": "cudaDeviceDisablePeerAccess",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaDeviceDisablePeerAccess ( int  peerDevice )"
+    },
+    "cudaDeviceEnablePeerAccess":{
+        "id": "cudaDeviceEnablePeerAccess",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaDeviceEnablePeerAccess ( int  peerDevice, unsigned int  flags )"
+    },
+    "cudaDriverGetVersion":{
+        "id": "cudaDriverGetVersion",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaDriverGetVersion ( int* driverVersion )"
+    },
+    "cudaRuntimeGetVersion":{
+        "id": "cudaRuntimeGetVersion",
+        "value": "\\_\\_host\\_\\_ \\_\\_device\\_\\_ cudaError\\_t cudaRuntimeGetVersion ( int* runtimeVersion )"
+    },
+    "cudaGetDriverEntryPoint":{
+        "id": "cudaGetDriverEntryPoint",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaGetDriverEntryPoint ( const char* symbol, void** funcPtr, unsigned long long flags )"
+    },
+    "cudaGetFuncBySymbol":{
+        "id": "cudaGetFuncBySymbol",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaGetFuncBySymbol ( cudaFunction\\_t* functionPtr, const void* symbolPtr )"
+    },
+    "cudaProfilerStart":{
+        "id": "cudaProfilerStart",
+        "value": "\\_\\_host\\_\\_ cudaError\\_t cudaProfilerStart ( void )"
+    }
+}

@@ -28,9 +28,10 @@ import * as nls from 'vscode-nls';
 import { CppBuildTaskProvider } from './cppBuildTaskProvider';
 
 /* --------------------------------------------------------------------------------------------
- * Import Common CUDA Functions used for Code Completion
+ * Import Common CUDA Functions used for Hover and Code Completion
  * ------------------------------------------------------------------------------------------ */
-import * as cudaCommonFuncs from '../LanguageServer/cuda-common.json';
+import * as cudaFuncs from '../LanguageServer/cuda-functions.json'; //For Hover
+import * as cudaCommonFuncs from '../LanguageServer/cuda-common.json'; //For Code Completion
 
 nls.config({ messageFormat: nls.MessageFormat.bundle, bundleFormat: nls.BundleFormat.standalone })();
 const localize: nls.LocalizeFunc = nls.loadMessageBundle();
@@ -48,8 +49,9 @@ let intervalTimer: NodeJS.Timer;
 let codeActionProvider: vscode.Disposable;
 
 /* --------------------------------------------------------------------------------------------
- * Function Declaration for Code Completion Function
+ * Function Declaration for Hover and Code Completion Functions
  * ------------------------------------------------------------------------------------------ */
+let codeHoverProvider: vscode.Disposable;
 let codeCompletionItemProvider: vscode.Disposable;
 
 export const intelliSenseDisabledError: string = "Do not activate the extension when IntelliSense is disabled.";
@@ -265,8 +267,24 @@ export async function activate(): Promise<void> {
     });
 
     /* --------------------------------------------------------------------------------------------
-    * Function Declaration for Code Completion Function
+    * Function Declaration for Hover and Code Completion Functions
     * ------------------------------------------------------------------------------------------ */
+    codeHoverProvider = vscode.languages.registerHoverProvider('cuda-cpp', {
+        provideHover(document: vscode.TextDocument, position: vscode.Position, token: vscode.CancellationToken) {
+            const range = document.getWordRangeAtPosition(position);
+            const word = document.getText(range);
+			try {
+				if (word === cudaFuncs[word].id) {
+					console.log("Found: " + word);
+					return new vscode.Hover(cudaFuncs[word].value);
+				}
+			}
+			catch (err) {
+                console.log(err);
+			}
+        }
+    });
+
     codeCompletionItemProvider = vscode.languages.registerCompletionItemProvider('cuda-cpp', {
         provideCompletionItems(document: vscode.TextDocument, position: vscode.Position, token: vscode.CancellationToken, context: vscode.CodeActionContext) {
 			const completionList = [];
@@ -1054,8 +1072,12 @@ export function deactivate(): Thenable<void> {
     }
 
     /* --------------------------------------------------------------------------------------------
-    * Dispose Code Completion Function
+    * Dispose Hover and Code Completion Functions
     * ------------------------------------------------------------------------------------------ */
+    if (codeHoverProvider) {
+        codeHoverProvider.dispose();
+    }
+    
     if (codeCompletionItemProvider) {
         codeCompletionItemProvider.dispose();
     }

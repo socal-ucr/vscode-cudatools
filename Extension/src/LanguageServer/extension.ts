@@ -32,6 +32,8 @@ import { CppBuildTaskProvider } from './cppBuildTaskProvider';
  * ------------------------------------------------------------------------------------------ */
 import * as cudaFuncs from '../LanguageServer/cuda-functions.json'; //For Hover
 import * as cudaCommonFuncs from '../LanguageServer/cuda-common.json'; //For Code Completion
+/* --------------------------------------------------------------------------------------------
+ * ------------------------------------------------------------------------------------------ */
 
 nls.config({ messageFormat: nls.MessageFormat.bundle, bundleFormat: nls.BundleFormat.standalone })();
 const localize: nls.LocalizeFunc = nls.loadMessageBundle();
@@ -53,6 +55,8 @@ let codeActionProvider: vscode.Disposable;
  * ------------------------------------------------------------------------------------------ */
 let codeHoverProvider: vscode.Disposable;
 let codeCompletionItemProvider: vscode.Disposable;
+/* --------------------------------------------------------------------------------------------
+ * ------------------------------------------------------------------------------------------ */
 
 export const intelliSenseDisabledError: string = "Do not activate the extension when IntelliSense is disabled.";
 
@@ -303,6 +307,8 @@ export async function activate(): Promise<void> {
 			return completionList;
         }
     });
+    /* --------------------------------------------------------------------------------------------
+    * ------------------------------------------------------------------------------------------ */
 
     // Log cold start.
     const activeEditor: vscode.TextEditor | undefined = vscode.window.activeTextEditor;
@@ -1081,6 +1087,8 @@ export function deactivate(): Thenable<void> {
     if (codeCompletionItemProvider) {
         codeCompletionItemProvider.dispose();
     }
+    /* --------------------------------------------------------------------------------------------
+    * ------------------------------------------------------------------------------------------ */
 
     return clients.dispose();
 }

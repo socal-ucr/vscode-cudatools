@@ -280,11 +280,14 @@ export async function activate(): Promise<void> {
 			try {
 				if (word === cudaFuncs[word].id) {
 					console.log("Found: " + word);
-					return new vscode.Hover(cudaFuncs[word].value);
+					const content = new vscode.MarkdownString(cudaFuncs[word].value + cudaFuncs[word].description + cudaFuncs[word].additional_information + cudaFuncs[word].url);
+					content.supportHtml = true;
+					content.isTrusted = true;
+					return new vscode.Hover(content);
 				}
 			}
 			catch (err) {
-                console.log(err);
+                		console.log(err);
 			}
         }
     });
